@@ -1,7 +1,25 @@
 body {
     background-image: url("../pics/houndstooth-pattern.png");
 }
+.header {
+    font-size: 75px;
+    font-family: 'Permanent Marker', cursive;
+}
+img {
+    border: solid black 4px;
+    border-radius: 12%;
+}
+.ul {
+    font-family: 'Gloria Hallelujah', cursive;
+    padding: 20px;
+}
 #target-number {
     font-size: 60px;
     color: magenta;
+}
+.wins-loss {
+
+}
+.number-picked {
+    font-size: 35px;
 }

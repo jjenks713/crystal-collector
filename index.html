@@ -9,18 +9,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script type="text/javascript" href="assets/javascript/game.js"></script>
+    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" rel="stylesheet">
 </head>
 
 <body>
     <header class="container jumbotron bg-dark">
-        <h1 class="text-center font-weight-bold text-light">Crystal Collector</h1>
+        <h1 class="text-center font-weight-bold text-light header">Crystal Collector</h1>
     </header>
     <br>
     <br>
     <div class="row">
-        <ul class="container bg-dark">
+        <ul class="container bg-dark ul">
             <li>
                 <p class="text-center font-weight-bold text-light">You will be given a random number at the start of
                     the
@@ -51,18 +52,16 @@
     <br>
     <br>
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
 
-            <div class="col-md-8 text-dark text-center">
-                <div id="target-number">57
-                </div>
+            <div class="col-md-8 text-dark text-center wins-loss">
+                <div id="target-number"></div>
             </div>
             <br>
             <br>
-            <div class="col-md-4 bg-dark text-center text-light">
-                <div id="wins">wins 0
-                </div>
-                <div id="losses">wins 0</div>
+            <div class="col-md-4 bg-dark text-center text-light wins-loss">
+                <div id="wins"></div>
+                <div id="losses"></div>
             </div>
         </div>
     </div>
@@ -70,17 +69,20 @@
     <br>
     <section class="container">
 
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-8 text-center">
                 <div class="row">
-                    <div id="crys-1" class="col-md-3"><img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" style="width:150px" alt="gem">C1</div>
-                    <div id="crys-2" class="col-md-3"><img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" style="width:150px" alt="gem">C2</div>
-                    <div id="crys-3" class="col-md-3"><img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" style="width:150px" alt="gem">C3</div>
-                    <div id="crys-4" class="col-md-3"><img src="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" style="width:150px" alt="gem">C4</div>
+                    <div id="crys-1" class="col-md-3"><img src="assets/pics/blue-gem.png" style="width:150px" alt="gem">C1</div>
+                    <div id="crys-2" class="col-md-3"><img src="assets/pics/red-gem.png" style="width:150px" alt="gem">C2</div>
+                    <div id="crys-3" class="col-md-3"><img src="assets/pics/yel-gem.png" style="width:150px" alt="gem">C3</div>
+                    <div id="crys-4" class="col-md-3"><img src="assets/pics/green-gem.png" style="width:150px" alt="gem">C4</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="text-center text-light bg-dark" id="num-picked">75</div>
+                
+                <div class="text-center text-light bg-dark number-picked">Your Number<br>
+                    <div id="num-picked">75</div>
+                </div>
             </div>
         </div>
 
@@ -88,7 +90,7 @@
 
 
 
-
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 
