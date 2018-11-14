@@ -1,3 +1,7 @@
 body {
     background-image: url("../pics/houndstooth-pattern.png");
 }
+#target-number {
+    font-size: 60px;
+    color: magenta;
+}
