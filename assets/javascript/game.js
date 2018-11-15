@@ -4,14 +4,17 @@ $(document).ready(function() {
         var counter = 0;
         var wins = 0;
         var losses = 0;
-        var images = ["./assets/pics/blue-gem.png", "./assets/pics/green-gem.png", "./assets/pics/red-gem.png", "./assets/pics/yel-gem.png"];
+        var number = [Math.floor(Math.random() * 15) + 1];
+        var number1 = [Math.floor(Math.random() * 15) + 1];
+        var number2 = [Math.floor(Math.random() * 15) + 1];
+        var number3 = [Math.floor(Math.random() * 15) + 1];
 
 
 
         
         $("#wins").text("Wins: " + wins);
         $("#losses").text("Losses: " + losses);
-        // $("#num-picked").text(counter);
+        $("#num-picked").text(counter);
 
         function randomNumber() {
             targetNumber = [Math.floor(Math.random() * 50) + 50];
@@ -21,19 +24,19 @@ $(document).ready(function() {
         randomNumber()
         
         function resetCrystals() {
-            for (var i = 0; i < images.length; i++) {
+            for (var i = 0; i < number.length; i++) {
                 var crystals = $("<img>");
                 crystals.addClass("crystals");
-                crystals.attr("src", images[i]);
-                crystals.attr("value", (Math.floor(Math.random() * 20) + 1));
-                $("#crys").append(crystals);
-                console.log(crystals.attr)
+                crystals.attr("src", "./assets/pics/blue-gem.png", "./assets/pics/red-gem.png", "./assets/pics/yel-gem.png", "./assets/pics/green-gem.png");
+                crystals.attr("value", number[i]);
+                $("#crys").html(crystals);
+                console.log(crystals)
             }
         }
         resetCrystals()
 
     
-        function Reset () {
+        function Reset() {
             randomNumber ();
             counter = 0;
             $("#target-number").html(targetNumber);
@@ -44,11 +47,11 @@ $(document).ready(function() {
             resetCrystals ();
         }
 
-        function crystalClick() {
-            $("#num-picked").text(counter);
+        $(".crystals").on("click", function() {
             var crystalValue = ($(this).attr("value"));
             crystalValue = parseInt(crystalValue);
-            counter += crystalValue;            
+            counter += crystalValue;       
+            $("#num-picked").html(counter);     
             if (counter == targetNumber) {
                 wins++;
                 Reset();
@@ -57,13 +60,11 @@ $(document).ready(function() {
                 losses++;
                 Reset();
             };
+            
             console.log(crystalValue)
-        };
+        });
         
-        crystalClick()
-    
-    
-        $(document).on("click", ".crystals", crystalClick);
+
         
 
 })
