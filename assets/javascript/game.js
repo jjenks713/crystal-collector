@@ -21,12 +21,14 @@ $(document).ready(function () {
         $("#target-number").text(targetNumber);
     }
     randomNumber();
+
     // set random number for array
     function makeARandomNumber() {
         return Math.floor(Math.random() * 20) + 1;
     }
-    makeARandomNumber();
+    // makeARandomNumber();
     console.log(number);
+
 
     function resetCrystals() {
         for (var i = 0; i < number.length; i++) {
@@ -44,13 +46,15 @@ $(document).ready(function () {
 
     function reset() {
         randomNumber();
-
+        makeARandomNumber()
         counter = 0;
         $("#target-number").html(targetNumber);
         $("#wins").html("Wins: " + wins);
         $("#losses").html("Losses: " + losses);
         $("#num-picked").html(counter);
+        console.log(number)
     }
+
 
     $(".crystals").on("click", function () {
         var crystalValue = ($(this).attr("value"));
@@ -60,18 +64,14 @@ $(document).ready(function () {
         if (counter == targetNumber) {
             wins++;
             reset();
-            makeARandomNumber();
+            
         }
         else if (counter > targetNumber) {
             losses++;
             reset();
-            makeARandomNumber();
+            
         };
 
         console.log(crystalValue)
     });
-
-
-
-
 })
