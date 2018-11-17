@@ -25,8 +25,9 @@ $(document).ready(function () {
     // set random number for array
     function makeARandomNumber() {
         return Math.floor(Math.random() * 20) + 1;
+        
     }
-    // makeARandomNumber();
+    makeARandomNumber();
     console.log(number);
 
 
@@ -46,6 +47,7 @@ $(document).ready(function () {
 
     function reset() {
         randomNumber();
+        number = Array(4).fill(0).map(makeARandomNumber);
         makeARandomNumber()
         counter = 0;
         $("#target-number").html(targetNumber);
